@@ -32,7 +32,7 @@ pipeline {
       steps{
 			  script{
 				    imagem.inside("--name pyapp "){
-              sh "python -m unittest app/tests/teste_rota.py"
+              sh " cd app && python -m unittest tests/teste_rota.py"
 					}		
 				}
 			}
